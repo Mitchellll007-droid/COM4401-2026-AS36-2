@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Team name** | |
+| **Team name** |Quatro|
 | **Repository** | |
 | **Deadline** | |
 | **How we'll keep in touch** | *(e.g. group chat, weekly check-in)* |
@@ -15,10 +15,10 @@
 
 | Member | Build / area owned | What they'll deliver |
 |--------|--------------------|----------------------|
-| | Administrative Assistant build | |
-| | Project Manager build | |
-| | Architect / CAD Designer build | |
-| | 3D Visualisation Specialist build | |
+|Hasan| Administrative Assistant build | |
+|Mackenzie| Project Manager build | |
+|Iman| Architect / CAD Designer build | |
+|Mitchell| 3D Visualisation Specialist build | |
 
 > Add or remove a row for a 3- or 5-person team. Shared tasks (final recommendation, budget check, ethics write-up) can be added as extra rows.
 
