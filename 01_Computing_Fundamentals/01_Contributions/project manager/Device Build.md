@@ -1,5 +1,4 @@
-<img src="https://www.buildcores.com/03b808e1-fad9-417e-94e5-83a662e697c1"
-alt="Project Manager build" width="600">
+<img width="2400" height="1260" alt="image" src="https://github.com/user-attachments/assets/1880112e-da7b-4ac5-bf67-982d8bbfbc46" />
 
 BuildCores Parts List: [Link](https://www.buildcores.com/builds/l8NgnCT2d?share=true)
 
