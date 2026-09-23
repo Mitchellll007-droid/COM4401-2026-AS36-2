@@ -15,6 +15,5 @@ BuildCores Parts List: [Link](https://uk.buildcores.com/builds/pur77nzOX?share=t
 |Monitor|[ViewSonic XG272-2K-OLED 27" 1440p 240Hz OLED Monitor](https://uk.buildcores.com/products/Monitor/y73jzr8ep/ViewSonic-XG272-2K-OLED-27%22-1440p-240Hz-OLED-Monitor)|[£379.00 (Box.co)](https://www.awin1.com/cread.php?awinmid=100685&awinaffid=743627&campaign=BuildCores&ued=https%3A%2F%2Fbox.co.uk%2Fxg272-2k-oled-viewsonic-xg272-quad-hd-gaming)|I chose this because|
 |Keyboard|[HP 320K Wired Standard Keyboard](https://uk.buildcores.com/products/Keyboard/2wjpsrplz/HP-320K-Wired-Standard-Keyboard)|[£17.76 (Amazon)](https://www.amazon.co.uk/dp/B08RXNFJJR?tag=buildcoresx-21&linkCode=ogi&th=1&psc=1)|I chose this because|
 |Mouse|[AULA SC580 Wireless Gaming Mouse White](https://uk.buildcores.com/products/Mouse/vzrhntlsg/AULA-SC580-Wireless-Gaming-Mouse-White)|[£56.91 (Amazon)](https://www.amazon.co.uk/dp/B0D4QD1677?tag=buildcoresx-21&linkCode=ogi&th=1&psc=1)|I chose this because|
-| | | |
 |**Total Price**|**$3743.1**| |
 |[BuildCores Web](https://uk.buildcores.com)|[BuildCores iOS](https://apps.apple.com/us/app/buildcores-part-picker-for-pc/id1441971434)|[BuildCores Android](https://play.google.com/store/apps/details?id=com.buildcores.buildcores&pcampaignid=web_share)|
