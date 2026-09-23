@@ -1,4 +1,5 @@
-![Project Manager Build](01_Computing_Fundamentals/01_Contributions/project manager/projectmanagerbuild0926.png)
+<img src="blob:https://www.buildcores.com/03b808e1-fad9-417e-94e5-83a662e697c1"
+alt="Project Manager build" width="600">
 
 BuildCores Parts List: [Link](https://www.buildcores.com/builds/l8NgnCT2d?share=true)
 
