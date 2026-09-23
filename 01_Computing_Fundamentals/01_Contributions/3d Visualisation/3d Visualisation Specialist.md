@@ -1,4 +1,5 @@
 BuildCores Parts List: [Link](https://uk.buildcores.com/builds/pur77nzOX?share=true)
+<img width="2400" height="1260" alt="image" src="https://github.com/user-attachments/assets/01937794-420d-4631-b2a6-425a1af6a8f1" />
 
  
 |**Component**|**Title**|**Price**|
