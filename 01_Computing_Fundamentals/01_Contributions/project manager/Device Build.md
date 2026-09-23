@@ -18,5 +18,5 @@ BuildCores Parts List: [Link](https://www.buildcores.com/builds/l8NgnCT2d?share=
 |Headphones|[Genius HS-02B Closed Black / Silver Headset](https://www.buildcores.com/products/Headphones/w2d5fq5un/Genius-HS-02B-Closed-Black-Silver-Headset)|[$5.65 (Amazon)](https://www.amazon.com/dp/B000BKE85W?tag=buildcoresx-20&linkCode=ogi&th=1&psc=1)|These headphones provide a simple way to listen to audio from the device but also integrates a microphone into it so that the users can speak in the meetings that they attend|
 |Keyboard|[HP 320K Wired Standard Keyboard](https://www.buildcores.com/products/Keyboard/2wjpsrplz/HP-320K-Wired-Standard-Keyboard)|[$12.99 (Amazon)](https://www.amazon.com/dp/B08RXNFJJR?tag=buildcoresx-20&linkCode=ogi&th=1&psc=1)|This keyboard is simple and the type found in most offices which will allow the users to feel familiar when interacting with the new device with less adapting|
 | | | |
-|**Total Price**|**£1273.68**| |
+|**Total Price**|**$1273.68**| |
 |[BuildCores Web](https://www.buildcores.com)|[BuildCores iOS](https://apps.apple.com/us/app/buildcores-part-picker-for-pc/id1441971434)|[BuildCores Android](https://play.google.com/store/apps/details?id=com.buildcores.buildcores&pcampaignid=web_share)|
