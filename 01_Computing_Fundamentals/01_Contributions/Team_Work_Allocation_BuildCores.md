@@ -29,12 +29,12 @@
 
 R = Responsible · A = Accountable · C = Consulted · I = Informed
 
-| Task | Member 1 | Member 2 | Member 3 | Member 4 |
+| Task | Mitchell | Kenz | Iman | Hasan |
 |------|----------|----------|----------|----------|
-| Administrative Assistant build (BuildCores + peripherals) | | | | |
-| Project Manager build (BuildCores + peripherals) | | | | |
-| Architect / CAD Designer build (BuildCores + peripherals) | | | | |
-| 3D Visualisation Specialist build (BuildCores + peripherals) | | | | |
+| Administrative Assistant build (BuildCores + peripherals) | | | |R|
+| Project Manager build (BuildCores + peripherals) | |R| | |
+| Architect / CAD Designer build (BuildCores + peripherals) | | |R| |
+| 3D Visualisation Specialist build (BuildCores + peripherals) |R| | | |
 | Component justifications (role suitability & value) | | | | |
 | Pricing evidence (screenshots, links, date checked) | | | | |
 | Combined budget & comparison table | | | | |
