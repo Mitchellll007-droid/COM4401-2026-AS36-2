@@ -1,0 +1,273 @@
+-- =============================================
+-- MINI PROJECT 1 - HARDWARE DATABASE
+-- =============================================
+
+-- 1. CREATE EMPLOYEE ROLES TABLE
+
+CREATE TABLE EmployeeRoles (
+    RoleID INT PRIMARY KEY,
+    RoleName VARCHAR(50) NOT NULL,
+    StaffCount INT NOT NULL,
+    Tasks VARCHAR(255) NOT NULL,
+    PerformanceNeed VARCHAR(100) NOT NULL,
+    BudgetPerUnit DECIMAL(8,2) NOT NULL
+);
+
+
+-- 2. CREATE WORKSTATION BUILDS TABLE
+
+CREATE TABLE WorkstationBuilds (
+    BuildID INT PRIMARY KEY,
+    RoleID INT NOT NULL,
+    BuildName VARCHAR(100) NOT NULL,
+    Source VARCHAR(50) NOT NULL,
+    FOREIGN KEY (RoleID) REFERENCES EmployeeRoles(RoleID)
+);
+
+
+-- 3. CREATE BUILD ITEMS TABLE
+
+CREATE TABLE BuildItems (
+    ItemID INT PRIMARY KEY,
+    BuildID INT NOT NULL,
+    HardwareCategory VARCHAR(50) NOT NULL,
+    ItemName VARCHAR(100) NOT NULL,
+    Specification VARCHAR(150) NOT NULL,
+    Cost DECIMAL(8,2) NOT NULL,
+    FOREIGN KEY (BuildID) REFERENCES WorkstationBuilds(BuildID)
+);
+
+
+-- 4. CREATE RECOMMENDATIONS TABLE
+
+CREATE TABLE Recommendations (
+    RecommendationID INT PRIMARY KEY,
+    RoleID INT NOT NULL,
+    Justification TEXT NOT NULL,
+    Compromise TEXT NOT NULL,
+    Approved BOOLEAN NOT NULL,
+    EthicalNotes TEXT NOT NULL,
+    FOREIGN KEY (RoleID) REFERENCES EmployeeRoles(RoleID)
+);
+
+
+-- =============================================
+-- ADD THE FOUR EMPLOYEE ROLES
+-- =============================================
+
+INSERT INTO EmployeeRoles VALUES
+(1, 'Administrative Assistant', 3,
+'Email, documents, spreadsheets, web systems, online meetings and basic customer records',
+'Basic office hardware workstation',
+950.00);
+
+INSERT INTO EmployeeRoles VALUES
+(2, 'Project Manager', 2,
+'Reports, scheduling, budgeting, presentations and online meetings',
+'Business hardware workstation with stronger display and workflow setup',
+1300.00);
+
+INSERT INTO EmployeeRoles VALUES
+(3, 'Architect / CAD Designer', 5,
+'CAD drawings, technical design and architectural project work',
+'CAD hardware workstation with dedicated GPU and suitable display',
+2500.00);
+
+INSERT INTO EmployeeRoles VALUES
+(4, '3D Visualisation Specialist', 2,
+'3D modelling, rendering and visualisation',
+'High-performance rendering and visualisation hardware workstation',
+3750.00);
+
+
+-- =============================================
+-- YOUR ADMINISTRATIVE ASSISTANT BUILD
+-- =============================================
+
+INSERT INTO WorkstationBuilds VALUES
+(1, 1, 'Administrative Assistant Workstation', 'BuildCores');
+
+
+-- =============================================
+-- YOUR HARDWARE
+-- =============================================
+
+INSERT INTO BuildItems VALUES
+(1, 1, 'Case',
+'Fractal Design Focus 2 ATX Mid Tower Black',
+'ATX Mid Tower Case',
+64.99);
+
+INSERT INTO BuildItems VALUES
+(2, 1, 'CPU',
+'Intel Core i7-12700K',
+'Intel Core i7-12700K Processor',
+269.99);
+
+INSERT INTO BuildItems VALUES
+(3, 1, 'Motherboard',
+'MSI H610 PRO H610M-G',
+'LGA1700 DDR4 Micro ATX',
+59.99);
+
+INSERT INTO BuildItems VALUES
+(4, 1, 'RAM',
+'TEAMGROUP Elite Black DDR4',
+'16GB (2x8GB) DDR4-3200',
+106.96);
+
+INSERT INTO BuildItems VALUES
+(5, 1, 'CPU Cooler',
+'Thermalright Assassin X 120 Refined SE',
+'120mm Air Cooler',
+15.00);
+
+INSERT INTO BuildItems VALUES
+(6, 1, 'Storage',
+'Kingston NV3 PCIe 4.0 NVMe SSD',
+'1TB M.2 2280 NVMe SSD',
+128.99);
+
+INSERT INTO BuildItems VALUES
+(7, 1, 'Power Supply',
+'Thermalright TB550S Black',
+'550W Non-Modular 80+ Bronze',
+45.00);
+
+INSERT INTO BuildItems VALUES
+(8, 1, 'Case Fan',
+'ARCTIC P12 Silent',
+'120mm Case Fan',
+4.99);
+
+INSERT INTO BuildItems VALUES
+(9, 1, 'Thermal Compound',
+'Corsair TM30',
+'3g Thermal Paste',
+4.99);
+
+INSERT INTO BuildItems VALUES
+(10, 1, 'Monitor',
+'ASUS PA248QFV',
+'24.1-inch 1920x1200 100Hz IPS Monitor',
+157.99);
+
+INSERT INTO BuildItems VALUES
+(11, 1, 'Keyboard/Mouse',
+'HP 320MK Wired Keyboard with Optical Mouse',
+'Wired keyboard and optical mouse',
+20.99);
+
+INSERT INTO BuildItems VALUES
+(12, 1, 'Webcam',
+'ToLuLu 1080P Webcam with Microphone',
+'1080p USB webcam with microphone',
+17.72);
+
+INSERT INTO BuildItems VALUES
+(13, 1, 'Headset',
+'Razer Kraken 7.1 Channel Closed Headset',
+'Wired closed headset',
+21.98);
+
+
+-- =============================================
+-- ADMIN RECOMMENDATION
+-- =============================================
+
+INSERT INTO Recommendations VALUES
+(1, 1,
+'The workstation provides suitable hardware for Administrative Assistant tasks including documents, spreadsheets, web systems and online meetings while remaining within the allocated hardware budget.',
+'The Intel Core i7-12700K provides more processing performance than typical administrative work requires, so a lower-cost processor could improve cost efficiency.',
+TRUE,
+'Hardware should be purchased responsibly and used with secure storage and appropriate access controls to protect confidential client and business information.'
+);
+
+
+-- QUERY 1: List every role
+
+SELECT *
+FROM EmployeeRoles;
+
+
+-- QUERY 2: Role names and budgets
+
+SELECT RoleName, BudgetPerUnit
+FROM EmployeeRoles;
+
+
+-- QUERY 3: Higher-budget roles
+
+SELECT RoleName, BudgetPerUnit
+FROM EmployeeRoles
+WHERE BudgetPerUnit > 1000;
+
+
+-- QUERY 4: Roles by team size
+
+SELECT RoleName, StaffCount
+FROM EmployeeRoles
+ORDER BY StaffCount DESC;
+
+
+-- QUERY 5: Find one build's items
+
+SELECT *
+FROM BuildItems
+WHERE BuildID = 1;
+
+
+-- QUERY 6: Count the items in build 1
+
+SELECT COUNT(*) AS NumberOfItems
+FROM BuildItems
+WHERE BuildID = 1;
+
+
+-- QUERY 7: Total cost of build 1
+
+SELECT SUM(Cost) AS TotalBuildCost
+FROM BuildItems
+WHERE BuildID = 1;
+
+
+-- QUERY 8: Cost of every build, most expensive first
+
+SELECT BuildID, SUM(Cost) AS TotalBuildCost
+FROM BuildItems
+GROUP BY BuildID
+ORDER BY TotalBuildCost DESC;
+
+
+-- QUERY 9: Which role is each build for?
+
+SELECT WorkstationBuilds.BuildName, EmployeeRoles.RoleName
+FROM WorkstationBuilds
+JOIN EmployeeRoles
+ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
+
+
+-- QUERY 10: Items with their build and role
+
+SELECT 
+    BuildItems.ItemName,
+    WorkstationBuilds.BuildName,
+    EmployeeRoles.RoleName
+FROM BuildItems
+JOIN WorkstationBuilds
+    ON BuildItems.BuildID = WorkstationBuilds.BuildID
+JOIN EmployeeRoles
+    ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
+
+
+    -- QUERY 11: Total hardware spend per role
+
+SELECT 
+EmployeeRoles.RoleName,
+SUM(BuildItems.Cost) AS TotalHardwareCost
+FROM EmployeeRoles
+JOIN WorkstationBuilds
+ON EmployeeRoles.RoleID = WorkstationBuilds.RoleID
+JOIN BuildItems
+ON WorkstationBuilds.BuildID = BuildItems.BuildID
+GROUP BY EmployeeRoles.RoleName;
