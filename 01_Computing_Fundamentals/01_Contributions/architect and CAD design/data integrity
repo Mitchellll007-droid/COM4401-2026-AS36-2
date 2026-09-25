@@ -1,0 +1,4 @@
+Data integrity is essential to ensure that the hardware workstation database remains accurate, consistent and reliable.<br>
+For Northwest Architecture Studio Ltd., the database must prevent incorrect or inconsistent information from being entered when storing employee roles, workstation builds and hardware components.<br>
+The database uses primary keys, foreign keys, appropriate data types and required fields to maintain reliable relationships between `EmployeeRoles`, `WorkstationBuilds`, `BuildItems` and `Recommendations`.<br>
+This helps reduce duplicate, missing or invalid data and ensures that hardware information and costs can be stored and retrieved accurately.                     
