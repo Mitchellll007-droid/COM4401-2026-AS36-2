@@ -5,9 +5,9 @@
 
 | | |
 |---|---|
-| **Team name** | |
+| **Team name** | Quatro |
 | **Repository** | |
-| **How we'll keep in touch** | *(e.g. group chat, weekly check-in)* |
+| **How we'll keep in touch** | weekly check in |
 
 ---
 
