@@ -1,0 +1,537 @@
+-- ============================================================
+-- COM4401 - MINI PROJECT 1
+-- NORTHWEST ARCHITECTURE STUDIO LTD
+-- HARDWARE WORKSTATION DATABASE
+-- ARCHITECT / CAD DESIGNER
+-- ============================================================
+--
+-- IMPORTANT:
+-- Do NOT use CREATE DATABASE or USE here.
+-- OneCompiler already provides the database.
+--
+-- The 11 queries at the bottom correspond directly to
+-- Queries 1-11 in the assessment brief.
+-- ============================================================
+
+
+-- ============================================================
+-- 1. REMOVE EXISTING TABLES
+-- This allows the script to be run again.
+-- ============================================================
+
+DROP TABLE IF EXISTS Recommendations;
+DROP TABLE IF EXISTS BuildItems;
+DROP TABLE IF EXISTS WorkstationBuilds;
+DROP TABLE IF EXISTS EmployeeRoles;
+
+
+-- ============================================================
+-- 2. CREATE EmployeeRoles
+-- ============================================================
+
+CREATE TABLE EmployeeRoles (
+    RoleID INT PRIMARY KEY,
+    RoleName VARCHAR(50) NOT NULL,
+    StaffCount INT NOT NULL,
+    Tasks VARCHAR(255) NOT NULL,
+    PerformanceNeed VARCHAR(100) NOT NULL,
+    BudgetPerUnit DECIMAL(8,2) NOT NULL
+);
+
+
+-- ============================================================
+-- 3. CREATE WorkstationBuilds
+-- ============================================================
+
+CREATE TABLE WorkstationBuilds (
+    BuildID INT PRIMARY KEY,
+    RoleID INT NOT NULL,
+    BuildName VARCHAR(100) NOT NULL,
+    Source VARCHAR(50) NOT NULL,
+
+    CONSTRAINT FK_Build_Role
+        FOREIGN KEY (RoleID)
+        REFERENCES EmployeeRoles(RoleID)
+);
+
+
+-- ============================================================
+-- 4. CREATE BuildItems
+-- ============================================================
+
+CREATE TABLE BuildItems (
+    ItemID INT PRIMARY KEY,
+    BuildID INT NOT NULL,
+    HardwareCategory VARCHAR(50) NOT NULL,
+    ItemName VARCHAR(100) NOT NULL,
+    Specification VARCHAR(150) NOT NULL,
+    Cost DECIMAL(8,2) NOT NULL,
+
+    CONSTRAINT FK_Item_Build
+        FOREIGN KEY (BuildID)
+        REFERENCES WorkstationBuilds(BuildID)
+);
+
+
+-- ============================================================
+-- 5. CREATE Recommendations
+-- ============================================================
+
+CREATE TABLE Recommendations (
+    RecommendationID INT PRIMARY KEY,
+    RoleID INT NOT NULL,
+    Justification TEXT NOT NULL,
+    Compromise TEXT NOT NULL,
+    Approved BOOLEAN NOT NULL,
+    EthicalNotes TEXT NOT NULL,
+
+    CONSTRAINT FK_Recommendation_Role
+        FOREIGN KEY (RoleID)
+        REFERENCES EmployeeRoles(RoleID)
+);
+
+
+-- ============================================================
+-- 6. INSERT EMPLOYEE ROLES
+-- ============================================================
+
+INSERT INTO EmployeeRoles
+(
+    RoleID,
+    RoleName,
+    StaffCount,
+    Tasks,
+    PerformanceNeed,
+    BudgetPerUnit
+)
+VALUES
+
+(
+    1,
+    'Administrative Assistant',
+    3,
+    'Email, documents, spreadsheets, web systems and online meetings',
+    'Basic office performance',
+    950.00
+),
+
+(
+    2,
+    'Project Manager',
+    2,
+    'Reports, meetings, project planning, drawing reviews and dashboards',
+    'Business and multitasking performance',
+    1300.00
+),
+
+(
+    3,
+    'Architect / CAD Designer',
+    5,
+    'CAD drawings, 2D drafting, 3D modelling, large design files and design reviews',
+    'High CAD and 3D modelling performance',
+    2500.00
+),
+
+(
+    4,
+    '3D Visualisation Specialist',
+    2,
+    'Rendering, 3D visualisation, large models, high-resolution textures and presentations',
+    'High-performance rendering',
+    3750.00
+);
+
+
+-- ============================================================
+-- 7. INSERT WORKSTATION BUILD
+--
+-- BuildID = 1 is deliberately used because the assignment
+-- brief asks Queries 5-7 to work with build number 1.
+-- ============================================================
+
+INSERT INTO WorkstationBuilds
+(
+    BuildID,
+    RoleID,
+    BuildName,
+    Source
+)
+VALUES
+(
+    1,
+    3,
+    'Architect / CAD Designer Workstation',
+    'BuildCores'
+);
+
+
+-- ============================================================
+-- 8. INSERT ARCHITECT / CAD HARDWARE
+--
+-- Replace 0.00 with your real evidenced prices before
+-- final submission.
+-- ============================================================
+
+INSERT INTO BuildItems
+(
+    ItemID,
+    BuildID,
+    HardwareCategory,
+    ItemName,
+    Specification,
+    Cost
+)
+VALUES
+
+(
+    101,
+    1,
+    'CPU',
+    'AMD Ryzen 9 9900X',
+    '12-core high-performance desktop processor',
+    299.99
+),
+
+(
+    102,
+    1,
+    'Motherboard',
+    'Gigabyte B850 GAMING WIFI6 AM5 DDR5 ATX',
+    'AM5 ATX motherboard with DDR5 and Wi-Fi',
+    136.99
+),
+
+(
+    103,
+    1,
+    'RAM',
+    'Silicon Power DDR5 64GB',
+    '2 x 32GB DDR5 6000MHz',
+    0.00
+),
+
+(
+    104,
+    1,
+    'GPU',
+    'NVIDIA GeForce RTX 2070 Founders Edition',
+    '8GB GDDR6 dedicated graphics',
+    0.00
+),
+
+(
+    105,
+    1,
+    'Storage',
+    'Kingston NV2 2TB NVMe SSD',
+    '2TB PCIe 4.0 NVMe storage',
+    0.00
+),
+
+(
+    106,
+    1,
+    'CPU Cooler',
+    'Noctua NH-D15 G2',
+    'High-performance dual-tower CPU air cooler',
+    127.95
+),
+
+(
+    107,
+    1,
+    'PSU',
+    'Antec GSK ATX 3.1 850W',
+    '850W fully modular 80+ Gold power supply',
+    0.00
+),
+
+(
+    108,
+    1,
+    'Case',
+    'Fractal Design Epoch XL',
+    'Black tempered-glass ATX workstation case',
+    69.98
+),
+
+(
+    109,
+    1,
+    'Case Fan',
+    'upHere 120mm High Airflow Fan',
+    '120mm high-airflow case fan',
+    23.08
+),
+
+(
+    110,
+    1,
+    'Monitor',
+    '27-inch QHD IPS Monitor',
+    '2560 x 1440 QHD IPS display',
+    0.00
+),
+
+(
+    111,
+    1,
+    'Keyboard',
+    'CAD Keyboard',
+    'Keyboard suitable for CAD and office productivity',
+    0.00
+),
+
+(
+    112,
+    1,
+    'Mouse',
+    'Precision Mouse',
+    'Precision mouse suitable for CAD navigation',
+    0.00
+),
+
+(
+    113,
+    1,
+    'Webcam/Headset',
+    'Webcam and Headset',
+    'Communication hardware for online meetings',
+    0.00
+),
+
+(
+    114,
+    1,
+    'Network/Cables/Adapters',
+    'DisplayPort Cable',
+    'DisplayPort cable for QHD display',
+    0.00
+);
+
+
+-- ============================================================
+-- 9. INSERT RECOMMENDATION
+-- ============================================================
+
+INSERT INTO Recommendations
+(
+    RecommendationID,
+    RoleID,
+    Justification,
+    Compromise,
+    Approved,
+    EthicalNotes
+)
+VALUES
+(
+    1,
+    3,
+
+    'The workstation combines a high-performance Ryzen 9 processor, 64GB DDR5 memory, dedicated graphics and fast NVMe storage to support 2D CAD, 3D modelling, large architectural files and visualisation workflows. The dedicated GPU improves 3D viewport performance and supports compatible GPU-accelerated rendering.',
+
+    'The RTX 2070 provides dedicated graphics capability but has 8GB of VRAM and is an older generation GPU. This represents a compromise within the £2,500 workstation budget, while the CPU, RAM and storage provide strong performance for CAD and modelling workloads.',
+
+    TRUE,
+
+    'The specification avoids unnecessary software costs because operating system, CAD, rendering and other software licences are managed separately. Hardware should be purchased according to workload requirements, with attention to energy use, durability, upgradeability and secure handling of confidential architectural project information.'
+);
+
+
+-- ============================================================
+-- ============================================================
+-- PART A - READING SINGLE TABLES
+-- ============================================================
+-- ============================================================
+
+
+-- ============================================================
+-- QUERY 1
+-- List every role
+--
+-- Brief requirement:
+-- Show all columns for every row in EmployeeRoles.
+-- ============================================================
+
+SELECT *
+FROM EmployeeRoles;
+
+
+-- ============================================================
+-- QUERY 2
+-- Just the names and budgets
+--
+-- Brief requirement:
+-- Show only the role name and budget per workstation.
+-- ============================================================
+
+SELECT
+    RoleName,
+    BudgetPerUnit
+FROM EmployeeRoles;
+
+
+-- ============================================================
+-- QUERY 3
+-- The higher-budget roles
+--
+-- Brief requirement:
+-- Show roles with a budget over £1000 per workstation.
+-- ============================================================
+
+SELECT
+    RoleName,
+    BudgetPerUnit
+FROM EmployeeRoles
+WHERE BudgetPerUnit > 1000;
+
+
+-- ============================================================
+-- QUERY 4
+-- Roles by team size
+--
+-- Brief requirement:
+-- Show roles and staff numbers, largest teams first.
+-- ============================================================
+
+SELECT
+    RoleName,
+    StaffCount
+FROM EmployeeRoles
+ORDER BY StaffCount DESC;
+
+
+-- ============================================================
+-- QUERY 5
+-- Find one build's items
+--
+-- Brief requirement:
+-- Show every component/peripheral belonging to build number 1.
+-- ============================================================
+
+SELECT *
+FROM BuildItems
+WHERE BuildID = 1;
+
+
+-- ============================================================
+-- QUERY 6
+-- Count the items in a build
+--
+-- Brief requirement:
+-- Count how many items are recorded for build number 1.
+-- ============================================================
+
+SELECT
+    COUNT(*) AS NumberOfItems
+FROM BuildItems
+WHERE BuildID = 1;
+
+
+-- ============================================================
+-- ============================================================
+-- PART B - TOTALS & SUMMARIES
+-- ============================================================
+-- ============================================================
+
+
+-- ============================================================
+-- QUERY 7
+-- Total cost of one build
+--
+-- Brief requirement:
+-- Add the cost of every item in build number 1.
+-- ============================================================
+
+SELECT
+    BuildID,
+    SUM(Cost) AS TotalHardwareCost
+FROM BuildItems
+WHERE BuildID = 1
+GROUP BY BuildID;
+
+
+-- ============================================================
+-- QUERY 8
+-- Cost of every build
+--
+-- Brief requirement:
+-- Show total cost of each build, most expensive first.
+-- ============================================================
+
+SELECT
+    BuildID,
+    SUM(Cost) AS TotalHardwareCost
+FROM BuildItems
+GROUP BY BuildID
+ORDER BY TotalHardwareCost DESC;
+
+
+-- ============================================================
+-- ============================================================
+-- PART C - ACROSS TABLES WITH JOINS
+-- ============================================================
+-- ============================================================
+
+
+-- ============================================================
+-- QUERY 9
+-- Which role is each build for?
+--
+-- Brief requirement:
+-- Show each build name next to the role it belongs to.
+-- ============================================================
+
+SELECT
+    WorkstationBuilds.BuildID,
+    WorkstationBuilds.BuildName,
+    EmployeeRoles.RoleName
+FROM WorkstationBuilds
+INNER JOIN EmployeeRoles
+    ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
+
+
+-- ============================================================
+-- QUERY 10
+-- Items with their build and role
+--
+-- Brief requirement:
+-- Show item name, build and role.
+-- This links three tables together.
+-- ============================================================
+
+SELECT
+    BuildItems.ItemName,
+    WorkstationBuilds.BuildName,
+    EmployeeRoles.RoleName
+FROM BuildItems
+INNER JOIN WorkstationBuilds
+    ON BuildItems.BuildID = WorkstationBuilds.BuildID
+INNER JOIN EmployeeRoles
+    ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
+
+
+-- ============================================================
+-- QUERY 11
+-- Spend per role - CHALLENGE QUERY
+--
+-- Brief requirement:
+-- Show total hardware cost grouped by role name.
+-- Combines JOIN + SUM + GROUP BY.
+-- ============================================================
+
+SELECT
+    EmployeeRoles.RoleName,
+    SUM(BuildItems.Cost) AS TotalHardwareCost
+FROM EmployeeRoles
+INNER JOIN WorkstationBuilds
+    ON EmployeeRoles.RoleID = WorkstationBuilds.RoleID
+INNER JOIN BuildItems
+    ON WorkstationBuilds.BuildID = BuildItems.BuildID
+GROUP BY EmployeeRoles.RoleName;
+
+
+-- ============================================================
+-- END OF THE 11 REQUIRED ASSIGNMENT QUERIES
+-- ============================================================
