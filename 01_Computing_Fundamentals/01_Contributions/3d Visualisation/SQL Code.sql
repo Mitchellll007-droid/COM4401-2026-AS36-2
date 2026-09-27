@@ -141,72 +141,72 @@ INSERT INTO BuildItems VALUES(
 
 --insert Administrative Assistant BuildItems
 INSERT INTO BuildItems VALUES(
-  24, 4,'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+  24, 1,'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
 );
 INSERT INTO BuildItems VALUES(
-  25, 4, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+  25, 1, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
 );
 INSERT INTO BuildItems VALUES(
-  26, 4, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+  26, 1, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
 );
 INSERT INTO BuildItems VALUES(
-  27, 4, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+  27, 1, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
 );
 INSERT INTO BuildItems VALUES(
-  28, 4, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+  28, 1, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
 );
 INSERT INTO BuildItems VALUES(
-  29, 4, 'Storage', 'Kingston NV3','2TB SSD NVME', 229.99
+  29, 1, 'Storage', 'Kingston NV3','2TB SSD NVME', 229.99
 );
 INSERT INTO BuildItems VALUES(
-  30, 4, 'Backup Storage', 'Seagate SkyHawk AI ', '10TB 7200RPM SATA', 435.00
+  30, 1, 'Backup Storage', 'Seagate SkyHawk AI ', '10TB 7200RPM SATA', 435.00
 );
 INSERT INTO BuildItems VALUES(
-  31, 4, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+  31, 1, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
 );
 INSERT INTO BuildItems VALUES(
-  32, 4, 'Monitor', 'ViewSonic XG272-2K-OLED ', '2K OLED 1440p 240Hz', 379.00
+  32, 1, 'Monitor', 'ViewSonic XG272-2K-OLED ', '2K OLED 1440p 240Hz', 379.00
 );
 INSERT INTO BuildItems VALUES(
-  33, 4, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+  33, 1, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
 );
 INSERT INTO BuildItems VALUES(
-  34, 4, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+  34, 1, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
 );
 
 --insert CAD Designer BuildItems
 INSERT INTO BuildItems VALUES(
-  35, 4, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+  35, 3, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
 );
 INSERT INTO BuildItems VALUES(
-  36, 4, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+  36, 3, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
 );
 INSERT INTO BuildItems VALUES(
-  37, 4, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+  37, 3, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
 );
 INSERT INTO BuildItems VALUES(
-  38, 4, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+  38, 3, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
 );
 INSERT INTO BuildItems VALUES(
-  39, 4, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+  39, 3, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
 );
 INSERT INTO BuildItems VALUES(
-  40, 4, 'Storage', 'Kingston NV3', '2TB SSD NVME', 229.99
+  40, 3, 'Storage', 'Kingston NV3', '2TB SSD NVME', 229.99
 );
 INSERT INTO BuildItems VALUES(
-  41, 4, 'Backup Storage', 'Seagate SkyHawk AI', '10TB 7200RPM SATA', 435.00
+  41, 3, 'Backup Storage', 'Seagate SkyHawk AI', '10TB 7200RPM SATA', 435.00
 );
 INSERT INTO BuildItems VALUES(
-  42, 4, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+  42, 3, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
 );
 INSERT INTO BuildItems VALUES(
-  43, 4, 'Monitor', 'ViewSonic XG272-2K-OLED', '2K OLED 1440p 240Hz', 379.00
+  43, 3, 'Monitor', 'ViewSonic XG272-2K-OLED', '2K OLED 1440p 240Hz', 379.00
 );
 INSERT INTO BuildItems VALUES(
-  44, 4, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+  44, 3, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
 );
 INSERT INTO BuildItems VALUES(
-  45, 4, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+  45, 3, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
 );
 
 --insert Recommendations
