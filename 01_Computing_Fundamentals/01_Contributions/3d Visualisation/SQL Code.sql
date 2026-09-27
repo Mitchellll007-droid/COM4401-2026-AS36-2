@@ -10,221 +10,221 @@ CREATE TABLE EmployeeRoles (
 
 CREATE TABLE WorkstationBuilds (
   BuildID INTEGER PRIMARY KEY,
-  RoleID INTEGER FOREIGN KEY),
+  RoleID INTEGER REFERENCES EmployeeRoles(RoleID),
   BuildName VARCHAR(100),
-  Source VARCHAR(50),
+  Source VARCHAR(50)
 );
 
 CREATE TABLE Recommendations (
   RecommendationID INTEGER PRIMARY KEY,
-  RoleID INTEGER FOREIGN KEY),
+  RoleID INTEGER REFERENCES EmployeeRoles(RoleID),
   Justification TEXT,
   Compromise TEXT,
   Approved BOOLEAN,
-  EthicalNotes TEXT,
+  EthicalNotes TEXT
 );
 
 CREATE TABLE BuildItems (
   ItemID INTEGER PRIMARY KEY,
-  BuildID INTEGER FOREIGN KEY),
+  BuildID INTEGER REFERENCES WorkstationBuilds(BuildID),
   HardwareCategory VARCHAR(50),
   ItemName VARCHAR(100),
   Specification VARCHAR(150),
-  Cost DECIMAl(8,2),
+  Cost DECIMAl(8,2)
 );
 
 -- insert EmployeeRoles
 INSERT INTO EmployeeRoles VALUES(
-  1, "Administrative Assistant", 3, "Email, documents, spreadsheets, web systems, online meetings, and basic customer records.",
-   "Basic office hardware workstation", £950
+  1, 'Administrative Assistant', 3, 'Email, documents, spreadsheets, web systems, online meetings, and basic customer records.',
+   'Basic office hardware workstation', 950
 );
 INSERT INTO EmployeeRoles VALUES(
-  2, "Project Manager ", 2, "Reports, meetings, project planning, reviewing drawings, dashboards, and client communication.",
-   "Business hardware workstation with stronger display/workflow setup ", £1300
+  2, 'Project Manager', 2, 'Reports, meetings, project planning, reviewing drawings, dashboards, and client communication.',
+   'Business hardware workstation with stronger display/workflow setup', 1300
 );
 INSERT INTO EmployeeRoles VALUES(
-  3, "Architect / CAD Designer", 5, "CAD drawings, 2D drafting, 3D modelling, large design files, multiple monitors, and design reviews.",
-   "CAD hardware workstation with dedicated GPU and suitable display", £2500
+  3, 'Architect / CAD Designer', 5, 'CAD drawings, 2D drafting, 3D modelling, large design files, multiple monitors, and design reviews.',
+   'CAD hardware workstation with dedicated GPU and suitable display', 2500
 );
 INSERT INTO EmployeeRoles VALUES(
-  4, "3D Visualisation Specialist", 2, "Rendering, 3D visualisation, large models, high-resolution textures, media output, and client visual presentations.",
-   "High-performance rendering/visualisation hardware workstation", £3750
+  4, '3D Visualisation Specialist', 2, 'Rendering, 3D visualisation, large models, high-resolution textures, media output, and client visual presentations.',
+   'High-performance rendering/visualisation hardware workstation', 3750
 );
 
 --insert WorkstationBuilds
 INSERT INTO WorkstationBuilds VALUES(
-  1, 1, "Administrative Assistant workstation ", "Builcores"
+  1, 1, 'Administrative Assistant workstation', 'Builcores'
 );
 INSERT INTO WorkstationBuilds VALUES(
-  1, 2, "Project Manager workstation", "Builcores"
+  2, 2, 'Project Manager workstation', 'Builcores'
 );
 INSERT INTO WorkstationBuilds VALUES(
-  1, 3, "Architect / CAD Designer workstation", "Builcores"
+  3, 3, 'Architect / CAD Designer workstation', 'Builcores'
 );
 INSERT INTO WorkstationBuilds VALUES(
-  1, 4, "3D Visualisation Specialist workstation", "Builcores"
+  4, 4, '3D Visualisation Specialist workstation', 'Builcores'
 );
 
 --insert 3D Visualisation Specialist BuildItems
 INSERT INTO BuildItems VALUES(
-  1, 4, "Case", "HYTE Y60 Case", "Dual Chamber Case with PCIe 4.0 Cable", 120.49
-)
+  1, 4, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+);
 INSERT INTO BuildItems VALUES(
-  2, 4, "CPU", "AMD Ryzen 9", "9950X3D CPU", 499.99
-)
+  2, 4, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+);
 INSERT INTO BuildItems VALUES(
-  3, 4, "Motherboard", "Gigabyte X870E", "DDR5 ATX Motherboard", 453.99
-)
+  3, 4, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+);
 INSERT INTO BuildItems VALUES(
-  4, 4, "GPU", "Gigabyte Radeon RX 9070 GPU", "GPU with 16GB VRAM", 649.99
-)
+  4, 4, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+);
 INSERT INTO BuildItems VALUES(
-  5, 4, "RAM", "Kingston FURY Beast RAM", "64GB DDR5 RAM", 799.99
-)
+  5, 4, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+);
 INSERT INTO BuildItems VALUES(
-  6, 4, "Storage", "Kingston NV3", "2TB SSD NVME", 229.99
-)
+  6, 4, 'Storage', 'Kingston NV3', '2TB SSD NVME', 229.99
+);
 INSERT INTO BuildItems VALUES(
-  7, 4, "Backup Storage", "	Seagate SkyHawk AI ", "10TB 7200RPM SATA", 435.00
-)
+  7, 4, 'Backup Storage', 'Seagate SkyHawk AI', '10TB 7200RPM SATA', 435.00
+);
 INSERT INTO BuildItems VALUES(
-  8, 4, "Power Supply", "MSI MAG A850GL PCIE5", "850W Power Supply", 99.99 
-)
+  8, 4, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+);
 INSERT INTO BuildItems VALUES(
-  9, 4, "Monitor", "ViewSonic XG272-2K-OLED ", "2K OLED 1440p 240Hz", 379.00
-)
+  9, 4, 'Monitor', 'ViewSonic XG272-2K-OLED', '2K OLED 1440p 240Hz', 379.00
+);
 INSERT INTO BuildItems VALUES(
-  10, 4, "Keyboard", "HP 320K Keyboard", "Standard Wired Keyboard", 17.76
-)
+  10, 4, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+);
 INSERT INTO BuildItems VALUES(
-  11, 4, "Mouse", "AULA SC580 Mouse", "Wireless Mouse", 56.91
-)
+  11, 4, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+);
 
 --insert Project Manager BuildItems
 INSERT INTO BuildItems VALUES(
-  1, 2, "Case", "	Corsair 3200D RS Black", "Simple PC Case", 59.99
-)
+  12, 2, 'Case', 'Corsair 3200D RS Black', 'Simple PC Case', 59.99
+);
 INSERT INTO BuildItems VALUES(
-  2, 2, "CPU", "Intel Core Ultra 5 245K", "9950X3D CPU", 175.97
-)
+  13, 2, 'CPU', 'Intel Core Ultra 5 245K', '9950X3D CPU', 175.97
+);
 INSERT INTO BuildItems VALUES(
-  3, 2, "Motherboard", "ASRock B860 Steel Legend WiFi DDR5 ATX", "DDR5 ATX Motherboard", 165.95
-)
+  14, 2, 'Motherboard', 'ASRock B860 Steel Legend WiFi DDR5 ATX', 'DDR5 ATX Motherboard', 165.95
+);
 INSERT INTO BuildItems VALUES(
-  4, 2, "RAM", "Kingston FURY Beast Black DDR5-6000 CL40 16GB (2x8GB)", "64GB DDR5 RAM", 151.01
-)
+  15, 2, 'RAM', 'Kingston FURY Beast Black DDR5-6000 CL40 16GB (2x8GB)', '64GB DDR5 RAM', 151.01
+);
 INSERT INTO BuildItems VALUES(
-  5, 2, "CPU Cooler", "Silverstone NovaPeak 360 Water 360mm 69.8 CFM Black", "64GB DDR5 RAM", 109.99
-)
+  16, 2, 'CPU Cooler', 'Silverstone NovaPeak 360 Water 360mm 69.8 CFM Black', '64GB DDR5 RAM', 109.99
+);
 INSERT INTO BuildItems VALUES(
-  6, 2, "Storage", "Seagate BarraCuda Q5 1TB SSD M.2-2280 PCIe 3.0 X4 NVMe", "2TB SSD NVME", 135.90
-)
+  17, 2, 'Storage', 'Seagate BarraCuda Q5 1TB SSD M.2-2280 PCIe 3.0 X4 NVMe', '2TB SSD NVME', 135.90
+);
 INSERT INTO BuildItems VALUES(
-  7, 2, "Webcam", "Vuexar Full HD 1080P Webcam with Microphone, Noise-Canceling,
-   Privacy Cover, Wide-Angle Lens, Auto Light Correction, Plug & Play USB Web Camera for Laptop, Desktop, PC, Mac, Zoom, Skype – Pro Series ", "10TB 7200RPM SATA", 24.08
-)
+  18, 2, 'Webcam', 'Vuexar Full HD 1080P Webcam with Microphone, Noise-Canceling,
+   Privacy Cover, Wide-Angle Lens, Auto Light Correction, Plug & Play USB Web Camera for Laptop, Desktop, PC, Mac, Zoom, Skype – Pro Series', '10TB 7200RPM SATA', 24.08
+);
 INSERT INTO BuildItems VALUES(
-  8, 2, "Power Supply", "	Silverstone SFX Black 450W Non-Modular 80+ Bronze Certified", "850W Power Supply", 75.49
-)
+  19, 2, 'Power Supply', 'Silverstone SFX Black 450W Non-Modular 80+ Bronze Certified', '850W Power Supply', 75.49
+);
 INSERT INTO BuildItems VALUES(
-  9, 2, "Monitor", "	ASRock Phantom Gaming PG34QRT3A 34 inch 3440x1440 180Hz VA Curved Monitor", "2K OLED 1440p 240Hz", 256.64
-)
+  20, 2, 'Monitor', 'ASRock Phantom Gaming PG34QRT3A 34 inch 3440x1440 180Hz VA Curved Monitor', '2K OLED 1440p 240Hz', 256.64
+);
 INSERT INTO BuildItems VALUES(
-  10, 2, "Keyboard", "HP 320K Keyboard", "Standard Wired Keyboard", 17.76
-)
+  21, 2, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+);
 INSERT INTO BuildItems VALUES(
-  11, 2, "Mouse", "Rii Wireless Mouse 1000DPI for PC, Laptop, Windows,Included Wireless USB dongle", "Wireless Mouse", 10.99
-)
+  22, 2, 'Mouse', 'Rii Wireless Mouse 1000DPI for PC, Laptop, Windows,Included Wireless USB dongle', 'Wireless Mouse', 10.99
+);
 INSERT INTO BuildItems VALUES(
-  12, 2, "Headphones", "Genius HS-02B Closed Black / Silver Headset", "Standard Wired Keyboard", 4.21
-)
+  23, 2, 'Headphones', 'Genius HS-02B Closed Black / Silver Headset', 'Standard Wired Keyboard', 4.21
+);
 
 --insert Administrative Assistant BuildItems
 INSERT INTO BuildItems VALUES(
-  1, 4, "Case", "HYTE Y60 Case", "Dual Chamber Case with PCIe 4.0 Cable", 120.49
-)
+  24, 4,'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+);
 INSERT INTO BuildItems VALUES(
-  2, 4, "CPU", "AMD Ryzen 9", "9950X3D CPU", 499.99
-)
+  25, 4, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+);
 INSERT INTO BuildItems VALUES(
-  3, 4, "Motherboard", "Gigabyte X870E", "DDR5 ATX Motherboard", 453.99
-)
+  26, 4, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+);
 INSERT INTO BuildItems VALUES(
-  4, 4, "GPU", "Gigabyte Radeon RX 9070 GPU", "GPU with 16GB VRAM", 649.99
-)
+  27, 4, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+);
 INSERT INTO BuildItems VALUES(
-  5, 4, "RAM", "Kingston FURY Beast RAM", "64GB DDR5 RAM", 799.99
-)
+  28, 4, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+);
 INSERT INTO BuildItems VALUES(
-  6, 4, "Storage", "Kingston NV3", "2TB SSD NVME", 229.99
-)
+  29, 4, 'Storage', 'Kingston NV3','2TB SSD NVME', 229.99
+);
 INSERT INTO BuildItems VALUES(
-  7, 4, "Backup Storage", "	Seagate SkyHawk AI ", "10TB 7200RPM SATA", 435.00
-)
+  30, 4, 'Backup Storage', 'Seagate SkyHawk AI ', '10TB 7200RPM SATA', 435.00
+);
 INSERT INTO BuildItems VALUES(
-  8, 4, "Power Supply", "MSI MAG A850GL PCIE5", "850W Power Supply", 99.99 
-)
+  31, 4, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+);
 INSERT INTO BuildItems VALUES(
-  9, 4, "Monitor", "ViewSonic XG272-2K-OLED ", "2K OLED 1440p 240Hz", 379.00
-)
+  32, 4, 'Monitor', 'ViewSonic XG272-2K-OLED ', '2K OLED 1440p 240Hz', 379.00
+);
 INSERT INTO BuildItems VALUES(
-  10, 4, "Keyboard", "HP 320K Keyboard", "Standard Wired Keyboard", 17.76
-)
+  33, 4, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+);
 INSERT INTO BuildItems VALUES(
-  11, 4, "Mouse", "AULA SC580 Mouse", "Wireless Mouse", 56.91
-)
+  34, 4, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+);
 
 --insert CAD Designer BuildItems
 INSERT INTO BuildItems VALUES(
-  1, 4, "Case", "HYTE Y60 Case", "Dual Chamber Case with PCIe 4.0 Cable", 120.49
-)
+  35, 4, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+);
 INSERT INTO BuildItems VALUES(
-  2, 4, "CPU", "AMD Ryzen 9", "9950X3D CPU", 499.99
-)
+  36, 4, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+);
 INSERT INTO BuildItems VALUES(
-  3, 4, "Motherboard", "Gigabyte X870E", "DDR5 ATX Motherboard", 453.99
-)
+  37, 4, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+);
 INSERT INTO BuildItems VALUES(
-  4, 4, "GPU", "Gigabyte Radeon RX 9070 GPU", "GPU with 16GB VRAM", 649.99
-)
+  38, 4, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+);
 INSERT INTO BuildItems VALUES(
-  5, 4, "RAM", "Kingston FURY Beast RAM", "64GB DDR5 RAM", 799.99
-)
+  39, 4, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+);
 INSERT INTO BuildItems VALUES(
-  6, 4, "Storage", "Kingston NV3", "2TB SSD NVME", 229.99
-)
+  40, 4, 'Storage', 'Kingston NV3', '2TB SSD NVME', 229.99
+);
 INSERT INTO BuildItems VALUES(
-  7, 4, "Backup Storage", "	Seagate SkyHawk AI ", "10TB 7200RPM SATA", 435.00
-)
+  41, 4, 'Backup Storage', 'Seagate SkyHawk AI', '10TB 7200RPM SATA', 435.00
+);
 INSERT INTO BuildItems VALUES(
-  8, 4, "Power Supply", "MSI MAG A850GL PCIE5", "850W Power Supply", 99.99 
-)
+  42, 4, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+);
 INSERT INTO BuildItems VALUES(
-  9, 4, "Monitor", "ViewSonic XG272-2K-OLED ", "2K OLED 1440p 240Hz", 379.00
-)
+  43, 4, 'Monitor', 'ViewSonic XG272-2K-OLED', '2K OLED 1440p 240Hz', 379.00
+);
 INSERT INTO BuildItems VALUES(
-  10, 4, "Keyboard", "HP 320K Keyboard", "Standard Wired Keyboard", 17.76
-)
+  44, 4, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+);
 INSERT INTO BuildItems VALUES(
-  11, 4, "Mouse", "AULA SC580 Mouse", "Wireless Mouse", 56.91
-)
+  45, 4, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+);
 
 --insert Recommendations
 
 INSERT INTO Recommendations VALUES
-(1, 1,"","",TRUE,""
+(1, 1,'','',TRUE,''
 );
 
 INSERT INTO Recommendations VALUES
-(2, 2,"","",TRUE,""
+(2, 2,'','',TRUE,''
 );
 
 INSERT INTO Recommendations VALUES
-(3, 3,"","",TRUE,""
+(3, 3,'','',TRUE,''
 );
 
 INSERT INTO Recommendations VALUES
-(4, 4,"","",TRUE,""
+(4, 4,'','',TRUE,''
 );
 
 --Query 1
@@ -266,7 +266,7 @@ FROM WorkstationBuilds
 JOIN EmployeeRoles
 ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
 --Query 10
-SELECT BuildItems.ItemName, WorkstationBuilds.BuldName,  EmployeeRoles.RoleName
+SELECT BuildItems.ItemName, WorkstationBuilds.BuildName,  EmployeeRoles.RoleName
 FROM BuildItems
 JOIN WorkstationBuilds
 ON BuildItems.BuildID = WorkstationBuilds.BuildID
