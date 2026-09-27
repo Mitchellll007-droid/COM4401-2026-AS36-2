@@ -28,7 +28,7 @@ CREATE TABLE BuildItems (
   ItemID INTEGER PRIMARY KEY,
   BuildID INTEGER REFERENCES WorkstationBuilds(BuildID),
   HardwareCategory VARCHAR(50),
-  ItemName VARCHAR(100),
+  ItemName VARCHAR(255),
   Specification VARCHAR(150),
   Cost DECIMAl(8,2)
 );
@@ -51,7 +51,7 @@ INSERT INTO EmployeeRoles VALUES(
    'High-performance rendering/visualisation hardware workstation', 3750
 );
 
---insert WorkstationBuilds
+-- insert WorkstationBuilds
 INSERT INTO WorkstationBuilds VALUES(
   1, 1, 'Administrative Assistant workstation', 'Builcores'
 );
@@ -65,7 +65,7 @@ INSERT INTO WorkstationBuilds VALUES(
   4, 4, '3D Visualisation Specialist workstation', 'Builcores'
 );
 
---insert 3D Visualisation Specialist BuildItems
+-- insert 3D Visualisation Specialist BuildItems
 INSERT INTO BuildItems VALUES(
   1, 4, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
 );
@@ -100,7 +100,7 @@ INSERT INTO BuildItems VALUES(
   11, 4, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
 );
 
---insert Project Manager BuildItems
+-- insert Project Manager BuildItems
 INSERT INTO BuildItems VALUES(
   12, 2, 'Case', 'Corsair 3200D RS Black', 'Simple PC Case', 59.99
 );
@@ -139,7 +139,7 @@ INSERT INTO BuildItems VALUES(
   23, 2, 'Headphones', 'Genius HS-02B Closed Black / Silver Headset', 'Standard Wired Keyboard', 4.21
 );
 
---insert Administrative Assistant BuildItems
+-- insert Administrative Assistant BuildItems
 INSERT INTO BuildItems VALUES(
   24, 1,'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
 );
@@ -174,7 +174,7 @@ INSERT INTO BuildItems VALUES(
   34, 1, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
 );
 
---insert CAD Designer BuildItems
+-- insert CAD Designer BuildItems
 INSERT INTO BuildItems VALUES(
   35, 3, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
 );
@@ -209,7 +209,7 @@ INSERT INTO BuildItems VALUES(
   45, 3, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
 );
 
---insert Recommendations
+-- insert Recommendations
 
 INSERT INTO Recommendations VALUES
 (1, 1,'','',TRUE,''
@@ -227,52 +227,52 @@ INSERT INTO Recommendations VALUES
 (4, 4,'','',TRUE,''
 );
 
---Query 1
+-- Query 1
 SELECT * 
 FROM EmployeeRoles;
---Query 2
+-- Query 2
 SELECT RoleName, BudgetPerUnit
 FROM EmployeeRoles;
---Query 3
+-- Query 3
 SELECT RoleName, BudgetPerUnit
 FROM EmployeeRoles
 WHERE BudgetPerUnit > 1000;
---Query 4
+-- Query 4
 SELECT RoleName, StaffCount
 FROM EmployeeRoles
 ORDER BY StaffCount DESC;
---Query 5
+-- Query 5
 SELECT *
 FROM BuildItems
 WHERE BuildID = 1;
---Query 6
+-- Query 6
 SELECT COUNT(*) AS NumberofItems
 FROM BuildItems
 WHERE BuildID = 1;
 
---Query 7
+-- Query 7
 SELECT SUM(Cost) AS TotalBuildCost
 FROM BuildItems
 WHERE BuildID = 1;
---Query 8
+-- Query 8
 SELECT BuildID, SUM(Cost) AS TotalBuildCost
 FROM BuildItems
 GROUP BY BuildID
 ORDER BY TotalBuildCost DESC;
 
---Query 9
+-- Query 9
 SELECT WorkstationBuilds.BuildName, EmployeeRoles.RoleName
 FROM WorkstationBuilds
 JOIN EmployeeRoles
 ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
---Query 10
+-- Query 10
 SELECT BuildItems.ItemName, WorkstationBuilds.BuildName,  EmployeeRoles.RoleName
 FROM BuildItems
 JOIN WorkstationBuilds
 ON BuildItems.BuildID = WorkstationBuilds.BuildID
 JOIN EmployeeRoles
 ON WorkstationBuilds.RoleID = EmployeeRoles.RoleID;
---Query 11
+-- Query 11
 SELECT 
 EmployeeRoles.RoleName,
 SUM(BuildItems.Cost) AS TotalHardwareCost
@@ -282,4 +282,3 @@ ON EmployeeRoles.RoleID = WorkstationBuilds.RoleID
 JOIN BuildItems
 ON WorkstationBuilds.BuildID = BuildItems.BuildID
 GROUP BY EmployeeRoles.RoleName;
-
