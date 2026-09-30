@@ -7,5 +7,3 @@ COM4401: Foundations of Computer Science and Academic Skills
 # Iman
 # Hasan
 # Mitchell
-# 
-#
