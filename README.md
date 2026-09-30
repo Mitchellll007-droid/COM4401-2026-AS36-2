@@ -4,6 +4,8 @@ COM4401: Foundations of Computer Science and Academic Skills
 # Team members
 
 # Kenzie 
+# Iman
 # 
+# Mitchell
 # Hasan
 #
