@@ -5,7 +5,7 @@ COM4401: Foundations of Computer Science and Academic Skills
 
 # Kenzie 
 # Iman
-# 
-# Mitchell
 # Hasan
+# Mitchell
+# 
 #
