@@ -34,7 +34,7 @@ R = Responsible · A = Accountable · C = Consulted · I = Informed
 | Requirements analysis (what the program must do) | R | R | R | R |
 | IPO chart (Input – Process – Output) | R | R | R | R |
 | Flowchart / pseudocode design | A,C | R | I | I |
-| Test plan (normal, abnormal, extreme data) | I | I | C | R |
+| Test plan (normal, abnormal, extreme data) | I | I | R | C |
 | Flowgorithm build (variables, input, processing) | A,C | R | I | I |
 | Flowgorithm build (decisions, loops, output) | A,C | R | I | I |
 | Validation / error handling | I | I | C | R |
