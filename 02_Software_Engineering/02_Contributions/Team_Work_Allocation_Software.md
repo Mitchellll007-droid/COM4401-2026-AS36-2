@@ -38,9 +38,9 @@ R = Responsible · A = Accountable · C = Consulted · I = Informed
 | Flowgorithm build (variables, input, processing) | | | | |
 | Flowgorithm build (decisions, loops, output) | | | | |
 | Validation / error handling | | | | |
-| Testing against the plan & recording results | | | | |
+| Testing against the plan & recording results | | |R | |
 | Deployment notes (how it would be rolled out) | | | | |
-| Ethical / professional considerations write-up | | | | |
+| Ethical / professional considerations write-up | | | R| |
 | Final team walkthrough & consistency check | | | | |
 
 > Columns are the team members — replace the headers with names. Add or remove a column for a 3- or 5-person team, and make sure every stage (analysis → design → build → test → deploy) is owned by someone.
