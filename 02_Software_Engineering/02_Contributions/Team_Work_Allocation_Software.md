@@ -29,7 +29,7 @@
 
 R = Responsible · A = Accountable · C = Consulted · I = Informed
 
-| Task | Member 1 | Member 2 | Member 3 | Member 4 |
+| Task | Mitchell | Kenzie | Iman | Hasan |
 |------|----------|----------|----------|----------|
 | Requirements analysis (what the program must do) | | | | |
 | IPO chart (Input – Process – Output) | | | | |
