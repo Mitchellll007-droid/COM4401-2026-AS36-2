@@ -1,0 +1,6 @@
+When making any changes with Visual Studio on the school Computers,
+
+Click Git on the top menu bar, then select commit or stash changes,
+on the changes tab select only all changes you made, 
+then enter a relevant message in the message box, click commit staged,
+then click push to properly make changes to the repository online.
