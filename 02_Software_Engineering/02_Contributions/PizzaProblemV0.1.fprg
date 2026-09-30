@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PizzaProblemV0.1"/>
+        <attribute name="authors" value="mw11crt"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-30 02:42:30 PM"/>
+        <attribute name="created" value="bXcxMWNydDtBTVREMjA0LTAzOzIwMjYtMDktMzA7MDE6Mjg6MDQgUE07MjUyNA=="/>
+        <attribute name="edited" value="bXcxMWNydDtBTVREMjA0LTAzOzIwMjYtMDktMzA7MDI6NDI6MzAgUE07MTsyNjI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="GetCustomerDetails(CustomerInfo)"/>
+            <call expression="CheckBlank(CustomerInfo)"/>
+        </body>
+    </function>
+    <function name="CheckBlank" type="Boolean" variable="IsBlank">
+        <parameters>
+            <parameter name="CustomerInfo" type="String" array="True"/>
+        </parameters>
+        <body>
+            <for variable="number" start="0" end="2" direction="inc" step="1">
+                <if expression="CustomerInfo[number] == &quot; &quot;">
+                    <then>
+                        <assign variable="IsBlank" expression="True"/>
+                    </then>
+                    <else>
+                        <assign variable="IsBlank" expression="False"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="GetCustomerDetails" type="String" variable="CustomerInfo">
+        <parameters/>
+        <body>
+            <comment text="This function asks the user for their information and inserts them into a fixed array.&#13;&#10;&#13;&#10;This includes Customer Name, Address, and Phone Number"/>
+            <input variable="CustomerInfo[0]"/>
+            <input variable="CustomerInfo[1]"/>
+            <input variable="CustomerInfo[2]"/>
+        </body>
+    </function>
+    <function name="GetNumOfPizzas" type="Integer" variable="NumOfPizzas">
+        <parameters/>
+        <body>
+            <input variable="NumOfPizzas"/>
+            <if expression="NumOfPizzas &gt; 6">
+                <then>
+                    <output expression="&quot;We Only make up to 6 pizzas per order. Please try again&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="NumOfPizzas &lt; 1">
+                <then>
+                    <output expression="&quot;You have entered a value less than 1&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="OrderChoice" type="String" variable="PizzaChoice[]">
+        <parameters>
+            <parameter name="NumOfPizzas" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="PizzaChoice" type="Real" array="True" size="5"/>
+            <declare name="ToppingPrice" type="Integer" array="True" size="4"/>
+            <input variable="PizzaSize"/>
+            <input variable="ExtraToppings"/>
+        </body>
+    </function>
+</flowgorithm>
