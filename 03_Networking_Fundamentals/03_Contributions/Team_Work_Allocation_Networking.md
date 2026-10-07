@@ -29,8 +29,8 @@
 
 R = Responsible · A = Accountable · C = Consulted · I = Informed
 
-**| Task | Kenzie | Mitchell | Hasan | Iman | Elijah |**
-|------|----------|----------|----------|----------|
+| Task | Kenzie | Mitchell | Hasan | Iman | Elijah |
+|------|----------|----------|----------|----------|----------|
 | LAN design (devices, switches, topology) | R | C | | | |
 | External network / internet gateway design | C | | | R | R |
 | IP addressing scheme & subnet plan | C | | R | | |
