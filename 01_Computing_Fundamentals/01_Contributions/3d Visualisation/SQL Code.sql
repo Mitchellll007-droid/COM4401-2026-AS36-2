@@ -141,72 +141,72 @@ INSERT INTO BuildItems VALUES(
 
 -- insert Administrative Assistant BuildItems
 INSERT INTO BuildItems VALUES(
-  24, 1,'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+  24, 1,'Case', 'Fractal Design Focus 2 ATX Mid Tower Black', 'CPU Case', 64.99
 );
 INSERT INTO BuildItems VALUES(
-  25, 1, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+  25, 1, 'CPU', 'Intel Core i5-12400', 'Mid Tier CPU', 179.99
 );
 INSERT INTO BuildItems VALUES(
-  26, 1, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+  26, 1, 'Motherboard', 'MSI H610 PRO H610M-G LGA1700 DDR4 Micro ATX', 'Baseline Motherboard', 59.99
 );
 INSERT INTO BuildItems VALUES(
-  27, 1, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+  27, 1, 'Graphics', 'Intel integrated graphics', 'Integrated Graphics', 0.00
 );
 INSERT INTO BuildItems VALUES(
-  28, 1, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+  28, 1, 'RAM', 'TEAMGROUP Elite Black DDR4-3200 CL22 16GB (2x8GB)', '16GB DDR4 RAM', 108.19
 );
 INSERT INTO BuildItems VALUES(
-  29, 1, 'Storage', 'Kingston NV3','2TB SSD NVME', 229.99
+  29, 1, 'Storage', '	Kingston NV3 PCIe 4.0 NVMe SSD 1TB','1TB SSD NVME', 128.99
 );
 INSERT INTO BuildItems VALUES(
-  30, 1, 'Backup Storage', 'Seagate SkyHawk AI ', '10TB 7200RPM SATA', 435.00
+  30, 1, 'CPU Cooler', 'Thermalright Assassin X 120 Refined SE ', 'Cooling for the CPU', 15.00
 );
 INSERT INTO BuildItems VALUES(
-  31, 1, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+  31, 1, 'Power Supply', 'Thermalright TB550S 550W 80+ Bronze', '550W Power Supply', 45.00 
 );
 INSERT INTO BuildItems VALUES(
-  32, 1, 'Monitor', 'ViewSonic XG272-2K-OLED ', '2K OLED 1440p 240Hz', 379.00
+  32, 1, 'Monitor', 'ASUS PA248QFV 24.1-inch 1920 × 1200 100Hz IPS Monitor', '100Hz IPS Monitor', 157.99
 );
 INSERT INTO BuildItems VALUES(
-  33, 1, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+  33, 1, 'Keyboard&Mouse', 'HP 320MK Wired Keyboard With Optical Mouse', 'Standard Wired Keyboard with mouse', 20.99
 );
 INSERT INTO BuildItems VALUES(
-  34, 1, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+  34, 1, 'Webcam,Headset&ThermalCompound', 'ToLuLu 1080P Webcam,Razer Kraken Wired Headset,Corsair 3g Thermal Paste', 'Webcam, Headset and Thermal Paste', 46.96
 );
 
 -- insert CAD Designer BuildItems
 INSERT INTO BuildItems VALUES(
-  35, 3, 'Case', 'HYTE Y60 Case', 'Dual Chamber Case with PCIe 4.0 Cable', 120.49
+  35, 3, 'Case', 'Fractal Design Epoch XL Black TG Light Tint', 'CPU Case', 69.98
 );
 INSERT INTO BuildItems VALUES(
-  36, 3, 'CPU', 'AMD Ryzen 9', '9950X3D CPU', 499.99
+  36, 3, 'CPU', '	AMD Ryzen 9 9900X', '9900X CPU', 299.99
 );
 INSERT INTO BuildItems VALUES(
-  37, 3, 'Motherboard', 'Gigabyte X870E', 'DDR5 ATX Motherboard', 453.99
+  37, 3, 'Motherboard', 'Gigabyte B850 GAMING WIFI6 AM5 DDR5 ATX', 'DDR5 ATX Motherboard', 136.99
 );
 INSERT INTO BuildItems VALUES(
-  38, 3, 'GPU', 'Gigabyte Radeon RX 9070 GPU', 'GPU with 16GB VRAM', 649.99
+  38, 3, 'GPU', 'Asus TUF GAMING OC Edition GeForce RTX 5080 16 GB', 'GPU with 16GB VRAM', 1539.97
 );
 INSERT INTO BuildItems VALUES(
-  39, 3, 'RAM', 'Kingston FURY Beast RAM', '64GB DDR5 RAM', 799.99
+  39, 3, 'RAM', 'Silicon Power DDR5 64GB (2x32GB) Zenith 6000MHz CL30 WHITE', '64GB DDR5 RAM', 799.99
 );
 INSERT INTO BuildItems VALUES(
-  40, 3, 'Storage', 'Kingston NV3', '2TB SSD NVME', 229.99
+  40, 3, 'Storage', 'Kingston NV2 2TB SSD M.2 PCIe 4.0 NVMe', '2TB SSD NVME', 199.90
 );
 INSERT INTO BuildItems VALUES(
-  41, 3, 'Backup Storage', 'Seagate SkyHawk AI', '10TB 7200RPM SATA', 435.00
+  41, 3, 'CPU Cooler', 'Corsair NAUTILUS Water 360mm RS ARGB Black', 'CPU Cooler', 109.99
 );
 INSERT INTO BuildItems VALUES(
-  42, 3, 'Power Supply', 'MSI MAG A850GL PCIE5', '850W Power Supply', 99.99 
+  42, 3, 'Power Supply', 'Antec GSK ATX3.1 Black 850W Fully Modular 80+ Gold', '850W Power Supply', 96.85
 );
 INSERT INTO BuildItems VALUES(
-  43, 3, 'Monitor', 'ViewSonic XG272-2K-OLED', '2K OLED 1440p 240Hz', 379.00
+  43, 3, 'Monitor', '	Asus ROG Swift OLED PG27AQDM 26.5" 1440p 240Hz OLED Monitor', 'OLED 1440p 240Hz', 218.99
 );
 INSERT INTO BuildItems VALUES(
-  44, 3, 'Keyboard', 'HP 320K Keyboard', 'Standard Wired Keyboard', 17.76
+  44, 3, 'Mouse+Keyboard', 'Logitech Wired Keyboard, Genius DX Wired', 'Standard Wired Keyboard and Mouse', 14.98
 );
 INSERT INTO BuildItems VALUES(
-  45, 3, 'Mouse', 'AULA SC580 Mouse', 'Wireless Mouse', 56.91
+  45, 3, 'Webcam+Headphones', 'UGREEN 1080P Webcam, Turtle Beach Wired Headset', 'Wired headphones and webcam', 33.13
 );
 
 -- insert Recommendations
