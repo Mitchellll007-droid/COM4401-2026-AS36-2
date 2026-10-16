@@ -13,15 +13,15 @@
 
 ## 1. Who's doing what
 
-| Section / theme | Responsible member(s) | Draft ready by |
-|-----------------|-----------------------|----------------|
-| Section 1: Password hygiene | Hasan | |
-| Section 2: Two-factor authentication | Hasan | |
-| Section 3: Phishing recognition | Mackenzie | |
-| Section 4: Safe use of devices |Iman | |
-| Section 5: Public Wi-Fi | Mitchell | |
-| Introduction & conclusion (whole team) | Mackenzie | |
-| Contents page & reference list (compile last) | | |
+| Section / theme | Responsible member(s) | 
+|-----------------|-----------------------|
+| Section 1: Password hygiene | Hasan | 
+| Section 2: Two-factor authentication | Hasan | 
+| Section 3: Phishing recognition | Mackenzie | 
+| Section 4: Safe use of devices |Iman | 
+| Section 5: Public Wi-Fi | Mitchell | 
+| Introduction & conclusion (whole team) | Mackenzie | 
+| Contents page & reference list (compile last) |
 
 > Each theme is one numbered section; everyone contributes to the introduction and conclusion. Each member should write **~700–1,000 words** and use **5+ credible sources** (1+ peer-reviewed academic, 2+ authoritative professional/government).
 
