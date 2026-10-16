@@ -5,11 +5,11 @@
 
 | | |
 |---|---|
-| **Team name** | |
+| **Team name** |Quatro|
 | **Repository** | |
 | **Launch (prep starts)** | Week 4 |
 | **Delivery (live)** | Week 5 |
-| **How we'll keep in touch** | *(e.g. group chat, weekly check-in)* |
+| **How we'll keep in touch** | Teams, weekly check-in |
 
 ---
 
@@ -17,11 +17,11 @@
 
 | Member | Section owned | What they'll present |
 |--------|---------------|----------------------|
-| | MP1 — Computing | Strongest evidence from the computing project |
-| | MP2 — Software Engineering | Strongest evidence from the software project |
-| | MP3 — Networking | Strongest evidence from the networking project |
-| | MP4 — Cyber-Security | Strongest evidence from the cyber-security project |
-| | Intro, live demo & conclusion (whole team) | Opening, the live demonstration and the reflection |
+| Mitchell | MP1 — Computing | Strongest evidence from the computing project |
+| Hasan | MP2 — Software Engineering | Strongest evidence from the software project |
+| Kenzie | MP3 — Networking | Strongest evidence from the networking project |
+| Iman | MP4 — Cyber-Security | Strongest evidence from the cyber-security project |
+| Mitchell, Kenzie| Intro, live demo & conclusion (whole team) | Opening, the live demonstration and the reflection |
 
 > Every member must present a meaningful part — a member who does not present (without an approved reason) cannot pass this component. Introduction, live demo and conclusion are shared. Pick the single strongest piece of evidence per project rather than re-presenting the whole report. Aim for **15–20 minutes** with a sensible split across the team.
 
@@ -31,21 +31,21 @@
 
 R = Responsible · A = Accountable · C = Consulted · I = Informed
 
-| Task | M1 | M2 | M3 | M4 |
+| Task | Mitchell | Kenzie | Iman | Hasan |
 |------|----|----|----|----|
-| Introduction (frame the portfolio as one story) | | | | |
-| MP1 Computing — section & evidence | | | | |
-| MP2 Software Engineering — section & evidence | | | | |
-| MP3 Networking — section & evidence | | | | |
-| MP4 Cyber-Security — section & evidence | | | | |
-| Live demonstration (open one artefact from the repo) | | | | |
-| Backup demo recording (in case live fails) | | | | |
-| Reflection & GAI-use statement | | | | |
-| Conclusion (practical takeaways) | | | | |
-| Slides — design, consistency & visuals | | | | |
-| Timing & rehearsal (keep within 15–20 min) | | | | |
-| Q&A preparation (mock questions, who leads on what) | | | | |
-| Final tidy of the GitHub portfolio before delivery | | | | |
+| Introduction (frame the portfolio as one story) | R | I | I | I |
+| MP1 Computing — section & evidence | R | I | I | I |
+| MP2 Software Engineering — section & evidence | I | I | I | R |
+| MP3 Networking — section & evidence | I | R | I | I |
+| MP4 Cyber-Security — section & evidence | I | I | R | I |
+| Live demonstration (open one artefact from the repo) | R | C | I | I |
+| Backup demo recording (in case live fails) | C | R | I | I |
+| Reflection & GAI-use statement | I | I | I | R |
+| Conclusion (practical takeaways) | I | R | I | I |
+| Slides — design, consistency & visuals | R | R | R | R |
+| Timing & rehearsal (keep within 15–20 min) | R | R | R | R |
+| Q&A preparation (mock questions, who leads on what) | I | R | I | I |
+| Final tidy of the GitHub portfolio before delivery | R | R | R | R |
 
 > Columns M1–M4 are the team members — replace the headers with names. Add or remove a column for a 3- or 5-person team, and make sure every mini-project, the live demo, and the intro/reflection/conclusion are each owned by someone.
 
