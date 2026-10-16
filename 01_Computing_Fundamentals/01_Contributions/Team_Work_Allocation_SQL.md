@@ -13,14 +13,14 @@
 
 ## 1. Who's doing what
 
-| Member | Build / area owned | What they'll deliver |
-|--------|--------------------|----------------------|
-|Hasan| Administrative Assistant build | |
-|Mackenzie| Project Manager build | |
-|Iman| Architect / CAD Designer build | |
-|Mitchell| 3D Visualisation Specialist build | |
+| Member | Build / area owned |
+|--------|--------------------|
+|Hasan| Administrative Assistant build |
+|Mackenzie| Project Manager build |
+|Iman| Architect / CAD Designer build |
+|Mitchell| 3D Visualisation Specialist build |
 
-> Add or remove a row for a 3- or 5-person team. Shared tasks (final recommendation, budget check, ethics write-up) can be added as extra rows.
+
 
 ---
 
@@ -28,13 +28,15 @@
 
 R = Responsible · A = Accountable · C = Consulted · I = Informed
 
-| Task | Member 1 | Member 2 | Member 3 | Member 4 |
+# Due to a misunderstanding, we all produced individual SQL code and evidence hence we were all responsible and accountable for all required sections
+
+| Task |Hasan|Mackenzie|Iman|Mitchell|
 |------|----------|----------|----------|----------|
-| Database schema (tables, keys, data types) | | | | |
-| EmployeeRoles table | | | | |
-| WorkstationBuilds table | | | | |
-| BuildItems table | | | | |
-| Recommendations table | | | | |
-| Data integrity rules (PKs, FKs, NOT NULL, numeric costs) | | | | |
-| Ethical / professional considerations write-up | | | | |
-| Final team recommendation & budget check | | | | |
+| Database schema (tables, keys, data types) |R,A|R,A|R,A|R,A|
+| EmployeeRoles table |R,A|R,A|R,A|R,A|
+| WorkstationBuilds table |R,A|R,A|R,A|R,A|
+| BuildItems table |R,A|R,A|R,A|R,A|
+| Recommendations table |R,A|R,A|R,A|R,A|
+| Data integrity rules (PKs, FKs, NOT NULL, numeric costs) |R,A|R,A|R,A|R,A|
+| Ethical / professional considerations write-up |R,A|R,A|R,A|R,A|
+| Final team recommendation & budget check |R,A|R,A|R,A|R,A|
