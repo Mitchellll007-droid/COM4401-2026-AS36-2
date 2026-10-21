@@ -21,7 +21,7 @@
 | Hasan | MP2 — Software Engineering | Strongest evidence from the software project |
 | Kenzie | MP3 — Networking | Strongest evidence from the networking project |
 | Iman | MP4 — Cyber-Security | Strongest evidence from the cyber-security project |
-| Mitchell, Kenzie| Intro, live demo & conclusion (whole team) | Opening, the live demonstration and the reflection |
+| Mitchell, Kenzie| Intro, live demo, declaration of GAI use & conclusion | Opening, the live demonstration and the reflection |
 
 > Every member must present a meaningful part — a member who does not present (without an approved reason) cannot pass this component. Introduction, live demo and conclusion are shared. Pick the single strongest piece of evidence per project rather than re-presenting the whole report. Aim for **15–20 minutes** with a sensible split across the team.
 
@@ -40,7 +40,7 @@ R = Responsible · A = Accountable · C = Consulted · I = Informed
 | MP4 Cyber-Security — section & evidence | I | I | R | I |
 | Live demonstration (open one artefact from the repo) | R | C | I | I |
 | Backup demo recording (in case live fails) | C | R | I | I |
-| Reflection & GAI-use statement | I | I | I | R |
+| Reflection & GAI-use statement | R, A | R | I | I|
 | Conclusion (practical takeaways) | I | R | I | I |
 | Slides — design, consistency & visuals | R | R | R | R |
 | Timing & rehearsal (keep within 15–20 min) | R | R | R | R |
